@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Contacts View-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ContactsView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ContactsView" customModule="Firestore_Messages" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_users" translatesAutoresizingMaskIntoConstraints="NO" id="af2-9T-SeE">
+                                <rect key="frame" x="30" y="109" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="af2-9T-SeE" secondAttribute="height" multiplier="1:1" id="1Gj-yz-kAp"/>
+                                    <constraint firstAttribute="width" constant="40" id="ogh-3Q-Re1"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="god-yx-z57">
+                                <rect key="frame" x="90" y="118.66666666666669" width="44.333333333333343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="TVr-YT-7kd">
+                                <rect key="frame" x="0.0" y="159.66666666666669" width="393" height="692.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="TVr-YT-7kd" secondAttribute="bottom" id="12F-sO-x8b"/>
+                            <constraint firstItem="af2-9T-SeE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="ChN-5W-eT7"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TVr-YT-7kd" secondAttribute="trailing" id="Fqi-vA-Rrm"/>
+                            <constraint firstItem="TVr-YT-7kd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="OMx-zT-mhE"/>
+                            <constraint firstItem="god-yx-z57" firstAttribute="leading" secondItem="af2-9T-SeE" secondAttribute="trailing" constant="20" id="R6n-Sh-vbH"/>
+                            <constraint firstItem="af2-9T-SeE" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="hIH-Ht-SXh"/>
+                            <constraint firstItem="god-yx-z57" firstAttribute="centerY" secondItem="af2-9T-SeE" secondAttribute="centerY" id="olR-38-Me3"/>
+                            <constraint firstItem="TVr-YT-7kd" firstAttribute="top" secondItem="god-yx-z57" secondAttribute="bottom" constant="20" id="wX7-uD-xJS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblTitle" destination="god-yx-z57" id="bCd-ZM-C7B"/>
+                        <outlet property="tableContacts" destination="TVr-YT-7kd" id="Q9V-CC-3cD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="84" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_users" width="30" height="30"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
